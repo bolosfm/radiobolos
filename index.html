@@ -40,6 +40,13 @@
     .centr h2{
         margin-bottom: 20px;
     }
+
+    footer{
+        color: white; 
+        padding: 2rem;
+        background-color: black;
+        text-align: center;
+    }
 </style>
 <body onload="init()">
     <div class="header">
@@ -47,17 +54,23 @@
         <h2> the place where dreams become reality </h2>
     </div>
     <div class="sounds"></div>
+    <footer>
+        <h2>Sportiv team GAD</h2>
+    </footer>
 </body>
 <script>
     let audio = [
         ['video-1636287467.mp4','Buna seara'],
-        ['video-1636288695.mp4','Specific carcotasilor...'],
-        ['My_Video.mp4','Invidia e mare'],
-        ['video-1636289017.mp4','Capela , Moaste'],
+        ['RPReplay_Final1636290097.mov' , 'Examene serioase'],
         ['video-1636289661.mp4','Soarece?'],
+        ['video-1636288695.mp4','Specific carcotasilor...'],
+        ['RPReplay_Final1636290243.mov' , 'GENIU'],
+        ['video-1636289017.mp4','Capela , Moaste'],
         ['RPReplay_Final1636290006.mov', 'Campioni'],
-        ['RPReplay_Final1636290097.mov' , 'Examene serioase']
+        ['My_Video.mp4','Invidia e mare'],
+        ['RPReplay_Final1636290278.mov' , 'Selectie riguroasa'],
     ];
+
     const init = () =>{
         for(sound in audio){
             document.querySelector('.sounds').innerHTML += 
