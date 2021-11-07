@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+    <title>bolosfm</title>
+</head>
+<style>
+    *{
+        font-family: 'Mohave', sans-serif;
+        font-weight: 400; margin: 0;
+    }
+
+    .header{
+        background-color: black; color: white;
+        padding: 5rem; text-align: center;
+    }
+
+    .header h1{
+        padding-bottom: 20px;
+    }
+
+    audio{
+        width: 90%;
+        border-radius: 15px;
+    }
+
+    .centr{
+        padding: 20px; margin: 10px 20px; 
+        border-radius: 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        display: flex;  flex-direction: column;
+        justify-content: center; align-items: center;
+    }
+
+    .centr h2{
+        margin-bottom: 20px;
+    }
+</style>
+<body onload="init()">
+    <div class="header">
+        <h1>BOLOSFM</h1>
+        <h2> the place where dreams become reality </h2>
+    </div>
+    <div class="sounds"></div>
+</body>
+<script>
+    let audio = [
+        ['ChildrenofTheSea.mp4','Children of the Sea'],
+        ['ChildrenofTheSea.mp4','Children of the Sea'],
+        ['ChildrenofTheSea.mp4','Children of the Sea'],
+        ['ChildrenofTheSea.mp4','Children of the Sea'],
+    ];
+    const init = () =>{
+        for(sound in audio){
+            document.querySelector('.sounds').innerHTML += 
+            `
+            <div class="centr">
+            <h2>${audio[sound][1]}</h2>
+            <audio controls>
+                <source src="${audio[sound][0]}" >
+                Your browser does not support the audio element.
+            </audio> 
+            </div><br>
+            `
+        }
+    }
+</script>
+</html>
